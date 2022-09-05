@@ -8,8 +8,8 @@ React's official tutorial:
 Agustín Navarro's React tutorial:
 [https://www.udemy.com/course/react-js-inicia-en-el-mundo-de-los-frameworks-de-javascript/]
 
-Escuela Frontend's React router tutorial:
+Escuela Frontend's React router 6 tutorial:
 [https://www.escuelafrontend.com/articulos/rutas-react-router6]
 
-React Router's official tutorial:
+React Router's 6 official tutorial:
 [https://reactrouter.com/en/main/getting-started/tutorial]
