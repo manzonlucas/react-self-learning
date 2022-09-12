@@ -36,7 +36,7 @@ export default function TodoApp() {
   }
 
   return (
-    <>
+    <main className="mainContainer">
       <form className="todoCreateForm" onSubmit={handleSubmit}>
         <input onChange={handleChange} className="todoInput" value={title} />
         <input
@@ -56,6 +56,6 @@ export default function TodoApp() {
             onDelete={handleDelete} />
         )}
       </div>
-    </>
+    </main>
   );
 }
