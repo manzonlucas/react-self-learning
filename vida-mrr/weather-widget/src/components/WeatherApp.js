@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import WeatherForm from "./WeatherForm";
 import WeatherMainInfo from "./WeatherMainInfo";
 import styles from './WeatherApp.module.css';
+import LoadingSpinner from "./LoadingSpinner";
 
 export default function WeatherApp() {
 
@@ -19,7 +20,11 @@ export default function WeatherApp() {
     try {
       const request = await fetch(`${process.env.REACT_APP_URL}&key=${process.env.REACT_APP_KEY}&q=${city}`);
       const data = await request.json();
-      setWeather(data);
+
+      setTimeout(() => {
+        setWeather(data);
+      }, 2000);
+
       console.log(data);
     } catch (error) {
       console.log('Fetching error in loadInfo()');
@@ -34,7 +39,8 @@ export default function WeatherApp() {
   return (
     <main>
       <WeatherForm onChangeCity={handleChangeCity} />
-      <WeatherMainInfo weather={weather} />
+      {weather ? <WeatherMainInfo weather={weather} /> : <LoadingSpinner />}
+
     </main>
   )
 }
