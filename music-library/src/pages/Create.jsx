@@ -1,9 +1,14 @@
 import { useState } from "react";
+import { useAppContext } from "../store/Store";
 import Input from "../components/Input";
 import InputImage from "../components/InputImage";
+import Layout from "../components/Layout";
 
 export default function Create() {
+
   const [newAlbum, setnewAlbum] = useState({ id: crypto.randomUUID() });
+
+  const store = useAppContext();
 
   function handleChange(e) {
     const key = e.target.name;
@@ -17,21 +22,24 @@ export default function Create() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    store.createItem(newAlbum);
   }
 
   return (
-    <form action="" onSubmit={handleSubmit}>
-      <h2>Album submit</h2>
+    <Layout>
+      <form action="" onSubmit={handleSubmit}>
+        <h2>Album submit</h2>
 
-      <Input name='artist' type='text' onChange={handleChange}></Input>
-      <Input name='album' type='text' onChange={handleChange}></Input>
-      <Input name='year' type='number' onChange={handleChange}></Input>
-      <Input name='tracks' type='number' onChange={handleChange}></Input>
-      <Input name='genre' type='text' onChange={handleChange}></Input>
+        <Input name='artist' type='text' onChange={handleChange}></Input>
+        <Input name='album' type='text' onChange={handleChange}></Input>
+        <Input name='year' type='number' onChange={handleChange}></Input>
+        <Input name='tracks' type='number' onChange={handleChange}></Input>
+        <Input name='genre' type='text' onChange={handleChange}></Input>
 
-      <InputImage getImage={getImageHandler}></InputImage>
+        <InputImage getImage={getImageHandler}></InputImage>
 
-      <input type="submit" value='Register album' />
-    </form>
+        <input type="submit" value='Register album' />
+      </form>
+    </Layout>
   )
 }

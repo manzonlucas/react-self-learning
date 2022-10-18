@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function InputImage({ getImage }) {
 
-  const [cover, setCover] = useState('');
+  const [cover, setCover] = useState('/assets/image-placeholder.jpg');
 
   function handleChangeFile(e) {
     const element = e.target;
@@ -21,7 +21,10 @@ export default function InputImage({ getImage }) {
       <label htmlFor="cover">Cover</label>
       <input type="file" name="cover" id="cover" onChange={handleChangeFile} />
       <div>
-        <img src={cover} alt="" />
+        <img
+          src={cover}
+          alt="Uploaded cover preview"
+          style={{ width: '300px' }} />
       </div>
     </section>
   )
