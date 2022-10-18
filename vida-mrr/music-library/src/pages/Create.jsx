@@ -1,12 +1,18 @@
 import { useState } from "react";
+import Input from "../components/Input";
+import InputImage from "../components/InputImage";
 
 export default function Create() {
-  const [info, setInfo] = useState({});
+  const [newAlbum, setnewAlbum] = useState({ id: crypto.randomUUID() });
 
   function handleChange(e) {
     const key = e.target.name;
     const value = e.target.value;
-    setInfo({ ...info, [key]: value });
+    setnewAlbum({ ...newAlbum, [key]: value });
+  }
+
+  function getImageHandler(image) {
+    setnewAlbum({ ...newAlbum, cover: image })
   }
 
   function handleSubmit(e) {
@@ -14,45 +20,18 @@ export default function Create() {
   }
 
   return (
-    <div>
-      <form action="" onSubmit={handleSubmit}>
-        <h2>Album submit</h2>
+    <form action="" onSubmit={handleSubmit}>
+      <h2>Album submit</h2>
 
-        <section>
-          <label htmlFor="artist">Artist:</label>
-          <input type="text" name="artist" id="artist" onChange={handleChange} />
-        </section>
+      <Input name='artist' type='text' onChange={handleChange}></Input>
+      <Input name='album' type='text' onChange={handleChange}></Input>
+      <Input name='year' type='number' onChange={handleChange}></Input>
+      <Input name='tracks' type='number' onChange={handleChange}></Input>
+      <Input name='genre' type='text' onChange={handleChange}></Input>
 
-        <section>
-          <label htmlFor="album">Album:</label>
-          <input type="text" name="album" id="album" onChange={handleChange} />
-        </section>
+      <InputImage getImage={getImageHandler}></InputImage>
 
-        <section>
-          <label htmlFor="release">Release year:</label>
-          <input type="number" name="release" id="release" onChange={handleChange} />
-        </section>
-
-        <section>
-          <label htmlFor="tracks">Tracks:</label>
-          <input type="number" name="tracks" id="tracks" onChange={handleChange} />
-        </section>
-
-        <section>
-          <label htmlFor="genre">Genre:</label>
-          <input type="text" name="genre" id="genre" onChange={handleChange} />
-        </section>
-
-        <section>
-          <label htmlFor="moreInfo">Comments: (optional)</label>
-          <textarea name="moreInfo" id="moreInfo" cols="30" rows="10" onChange={handleChange} ></textarea>
-          <div>
-            <img src="" alt="" />
-          </div>
-        </section>
-
-        <input type="submit" />
-      </form>
-    </div>
+      <input type="submit" value='Register album' />
+    </form>
   )
 }
