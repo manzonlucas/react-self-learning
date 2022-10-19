@@ -3,12 +3,13 @@ import { useAppContext } from "../store/Store";
 import Input from "../components/Input";
 import InputImage from "../components/InputImage";
 import Layout from "../components/Layout";
+import { useNavigate } from "react-router-dom";
 
 export default function Create() {
 
-  const [newAlbum, setnewAlbum] = useState({ id: crypto.randomUUID() });
-
+  const [newAlbum, setnewAlbum] = useState({ id: crypto.randomUUID(), cover: '/assets/image-placeholder.jpg' });
   const store = useAppContext();
+  const navigate = useNavigate();
 
   function handleChange(e) {
     const key = e.target.name;
@@ -23,6 +24,8 @@ export default function Create() {
   function handleSubmit(e) {
     e.preventDefault();
     store.createItem(newAlbum);
+    navigate('/')
+
   }
 
   return (
@@ -31,7 +34,7 @@ export default function Create() {
         <h2>Album submit</h2>
 
         <Input name='artist' type='text' onChange={handleChange}></Input>
-        <Input name='album' type='text' onChange={handleChange}></Input>
+        <Input name='albumName' type='text' onChange={handleChange}></Input>
         <Input name='year' type='number' onChange={handleChange}></Input>
         <Input name='tracks' type='number' onChange={handleChange}></Input>
         <Input name='genre' type='text' onChange={handleChange}></Input>

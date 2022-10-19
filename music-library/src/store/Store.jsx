@@ -1,15 +1,17 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
+import data from '../library-template.json';
 
 const AppContext = createContext({
   items: [],
   createItem: (item) => { },
   getItem: (id) => { },
-  updateItem: (id) => { }
+  updateItem: (item) => { },
+  deleteItem: (item) => { }
 })
 
 export default function Store({ children }) {
 
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(data);
 
   function createItem(item) {
     const temp = [...items];
@@ -28,13 +30,21 @@ export default function Store({ children }) {
     temp[index] = { ...item };
   }
 
+  function deleteItem(item) {
+    const index = items.findIndex(index => index.id === item.id)
+    const temp = [...items];
+    temp[index] = null;
+    // CHEQUEAR SI ESTA FUNCION FUNCIONA OK
+  }
+
   return (
     <AppContext.Provider
       value={{
         items,
         createItem,
         getItem,
-        updateItem
+        updateItem,
+        deleteItem
       }}>
       {children}
     </AppContext.Provider>

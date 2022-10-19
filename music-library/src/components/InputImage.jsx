@@ -24,7 +24,7 @@ export default function InputImage({ getImage }) {
         <img
           src={cover}
           alt="Uploaded cover preview"
-          style={{ width: '300px' }} />
+          style={{ maxWidth: '300px', maxHeight: '300px' }} />
       </div>
     </section>
   )
