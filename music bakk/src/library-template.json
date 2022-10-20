@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "artist": "slipknot",
+    "albumName": "iowa",
+    "year": 2001,
+    "tracks": 14,
+    "genre": "nu metal",
+    "cover": "/assets/slipknot-iowa.jpg"
+  },
+  {
+    "id": 2,
+    "artist": "lagwagon",
+    "albumName": "hoss",
+    "year": 1995,
+    "tracks": 14,
+    "genre": "melodic hardcore",
+    "cover": "/assets/lagwagon-hoss.jpg"
+  },
+  {
+    "id": 3,
+    "artist": "dua lipa",
+    "albumName": "future nostalgia",
+    "year": 2020,
+    "tracks": 1,
+    "genre": "pop",
+    "cover": "/assets/dualipa-futurenostalgia.png"
+  }
+]
