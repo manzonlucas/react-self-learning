@@ -9,7 +9,7 @@ export default function View() {
   const store = useAppContext();
 
   useEffect(() => {
-    const albumData = store.getItem(params.albumId);
+    const albumData = store.getItem(params.id);
     setAlbum(albumData);
   }, [])
 

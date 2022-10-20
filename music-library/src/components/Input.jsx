@@ -12,6 +12,7 @@ export default function Input({ name, type, onChange }) {
       <input type={type}
         name={name}
         id={name}
+        required
         onChange={onChange} />
     </section>
   )

@@ -1,7 +1,7 @@
 # react-self-learning
+
 Self-learning React from various sources
 
-Sources:
 React's official tutorial:
 [https://es.reactjs.org/tutorial/tutorial.html]
 
@@ -13,3 +13,6 @@ Escuela Frontend's React router 6 tutorial:
 
 React Router's 6 official tutorial:
 [https://reactrouter.com/en/main/getting-started/tutorial]
+
+Vida MRR's YouTube channel
+[https://www.youtube.com/c/VidaMRR]

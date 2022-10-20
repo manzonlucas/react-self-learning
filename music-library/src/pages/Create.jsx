@@ -37,7 +37,7 @@ export default function Create() {
         <Input name='albumName' type='text' onChange={handleChange}></Input>
         <Input name='year' type='number' onChange={handleChange}></Input>
         <Input name='tracks' type='number' onChange={handleChange}></Input>
-        <Input name='genre' type='text' onChange={handleChange}></Input>
+        <Input name='genres' type='text' onChange={handleChange}></Input>
 
         <InputImage getImage={getImageHandler}></InputImage>
 

@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Index />}></Route>
           <Route path='create' element={<Create />}></Route>
-          <Route path='view/:albumId' element={<AlbumView></AlbumView>}></Route>
+          <Route path='view/:id' element={<AlbumView></AlbumView>}></Route>
         </Routes >
       </BrowserRouter>
     </Store>

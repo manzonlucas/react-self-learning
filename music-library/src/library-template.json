@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "artist": "slipknot",
     "albumName": "iowa",
     "year": 2001,
@@ -8,6 +9,7 @@
     "cover": "/assets/slipknot-iowa.jpg"
   },
   {
+    "id": 2,
     "artist": "lagwagon",
     "albumName": "hoss",
     "year": 1995,
@@ -16,6 +18,7 @@
     "cover": "/assets/lagwagon-hoss.jpg"
   },
   {
+    "id": 3,
     "artist": "dua lipa",
     "albumName": "future nostalgia",
     "year": 2020,
