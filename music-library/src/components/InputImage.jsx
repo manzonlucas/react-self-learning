@@ -18,13 +18,28 @@ export default function InputImage({ getImage }) {
 
   return (
     <section>
-      <label htmlFor="cover">Cover</label>
-      <input type="file" name="cover" id="cover" onChange={handleChangeFile} />
+      <label
+        htmlFor="cover"
+        className="block w-full tracking-wide text-darkBlue text-xs font-bold mb-1"
+      >Cover</label>
+      <input
+        type="file"
+        name="cover"
+        id="cover"
+        onChange={handleChangeFile}
+        className='block w-full text-sm text-red
+      file:mr-4 file:py-2 file:px-4
+      file:rounded-full file:border-0
+      file:text-sm file:font-semibold
+      file:bg-darkBlue file:text-white
+      hover:file:bg-orange'
+      />
       <div>
         <img
           src={cover}
           alt="Uploaded cover preview"
-          style={{ maxWidth: '300px', maxHeight: '300px' }} />
+          className='w-64 h-64 object-cover m-auto my-2 rounded'
+        />
       </div>
     </section>
   )
