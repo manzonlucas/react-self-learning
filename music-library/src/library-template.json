@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "7a52a3e8-1dff-4614-b502-58fee96b824a",
     "artist": "slipknot",
     "album": "iowa",
     "year": 2001,
@@ -9,7 +9,7 @@
     "cover": "/assets/slipknot-iowa.jpg"
   },
   {
-    "id": 2,
+    "id": "7a52a3e8-1dff-4614-b502-58fee96b824b",
     "artist": "lagwagon",
     "album": "hoss",
     "year": 1995,
@@ -18,7 +18,7 @@
     "cover": "/assets/lagwagon-hoss.jpg"
   },
   {
-    "id": 3,
+    "id": "7a52a3e8-1dff-4614-b502-58fee96b824c",
     "artist": "dua lipa",
     "album": "future nostalgia",
     "year": 2020,

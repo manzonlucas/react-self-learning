@@ -1,4 +1,5 @@
-import NavBar from "./NavBar"
+import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
@@ -7,6 +8,7 @@ export default function Layout({ children }) {
       <main className='w-4/5 m-auto my-8 flex justify-evenly flex-wrap gap-5'>
         {children}
       </main>
+      <Footer />
     </>
   )
 }

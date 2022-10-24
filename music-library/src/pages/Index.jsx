@@ -1,7 +1,7 @@
 import { useAppContext } from "../store/Store"
 import Layout from "../components/Layout";
 import AlbumCard from "../components/AlbumCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Index() {
   const store = useAppContext();

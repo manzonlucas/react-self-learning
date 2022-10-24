@@ -15,7 +15,7 @@ export default function NavBar() {
   }, [window.location.href])
 
   return (
-    <header className="bg-darkBlue text-white flex content-center	items-center justify-between h-12">
+    <header className="shrink-0 bg-blue text-white flex content-center	items-center justify-between h-12">
       <h1 className="text-3xl text-orange grow basis-1">
         {/* <img src="/assets/disc-icon.png" alt="disc-icon" /> */}
         <span className="m-5 font-bold">My music library</span>
