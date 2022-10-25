@@ -50,8 +50,8 @@ https://reactrouter.com/en/main/getting-started/tutorial
 Escuela Frontend: React router 6: \
 https://www.escuelafrontend.com/articulos/rutas-react-router6
 
-React Router's 6 official tutorial:
+React Router's 6 official tutorial: \
 https://reactrouter.com/en/main/getting-started/tutorial
 
-Vida MRR's YouTube channel
+Vida MRR's YouTube channel: \
 https://www.youtube.com/c/VidaMRR
