@@ -2,8 +2,7 @@
 
 My React self-learning journey from different sources.
 
-All the projects development environments were set up using create-react-app. \
-Inside each project folder you will find the corresponding readme with its details.
+All the projects development environments were set up using create-react-app.
 
 To get started with any of them, first install all the required packages/dependencies, in the project directory run:
 ### `npm install`
